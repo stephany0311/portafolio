@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           });
           console.log("enviando");
   
-          fetch(" https://contact-mely.herokuapp.com/contact", {
+          fetch("https://contactosdf.herokuapp.com/contact/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
               Swal.close();
               Swal.fire({
                 icon: resp.status,
-                title: "success!",
-                text: "Message Sent",
+                title: "Exito!",
+                text: resp.message,
               }).then((result) => {
                 if (result.isConfirmed) {
                   document.getElementById("name").value = "";
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           Swal.fire({
             icon: "error",
             title: "Upss...",
-            text: "Invalid Email",
+            text: "email invalido",
           });
         }
       }
