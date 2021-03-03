@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           });
           console.log("enviando");
   
-          fetch("https://contactosdf.herokuapp.com/contact/", {
+          fetch("https://contact-mely.herokuapp.com/contact", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
